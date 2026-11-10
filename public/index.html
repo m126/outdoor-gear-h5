@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="app-build" content="2026.11.10-tag-picker-06"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1d382d"><meta name="description" content="拾光山野Lab，记录热爱，探索山野。管理每一件装备，准备每一次出发。"><title>拾光山野Lab｜记录热爱，探索山野</title>
+<style>
+:root{--ink:#1d2a24;--muted:#718078;--line:#e5eae5;--paper:#f5f7f3;--white:#fff;--forest:#1d382d;--moss:#55765d;--sage:#e9f0e8;--sand:#e9dfcd;--amber:#9b6a29;--red:#a34d43;--shadow:0 12px 36px #26372b12;font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:245px;background:var(--forest);color:#f6f8f4;padding:28px 18px;display:flex;flex-direction:column;z-index:5}.logo{padding:0 12px 30px}.logo-mark{font-size:22px;font-weight:850;letter-spacing:1px}.logo-mark span{color:#b7d1a9}.logo small{display:block;color:#b1c0b4;font-size:10px;letter-spacing:2.3px;margin-top:7px}.nav-label{color:#8fa394;font-size:10px;letter-spacing:2px;padding:0 13px;margin:15px 0 10px}.nav{border:0;background:transparent;color:#c3cec4;text-align:left;padding:13px 14px;border-radius:10px;margin:3px 0;font-size:13px;font-weight:650;display:flex;gap:12px;align-items:center}.nav .ico{width:19px;text-align:center;font-size:16px}.nav.active,.nav:hover{background:#ffffff16;color:#fff}.nav.active{box-shadow:inset 3px 0 #b9d1a9}.side-foot{margin-top:auto;color:#8fa394;font-size:11px;line-height:1.8;padding:15px 12px}.main{margin-left:245px;padding:32px clamp(20px,4vw,58px) 80px;max-width:1600px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:28px}.eyebrow{font-size:10px;letter-spacing:2px;color:#819087;font-weight:800}.page-title{font-size:30px;letter-spacing:-.8px;margin:7px 0 4px}.subtitle{font-size:13px;color:var(--muted);margin:0;line-height:1.6}.top-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.workspace{border:1px solid #dce4da;background:white;border-radius:10px;padding:10px 12px;color:var(--ink);font-size:12px;font-weight:700}.btn{border:1px solid #dce4dc;background:#fff;border-radius:10px;padding:10px 14px;color:var(--ink);font-size:12px;font-weight:750}.btn.primary{background:var(--forest);border-color:var(--forest);color:white}.btn.soft{background:var(--sage);border-color:var(--sage);color:#365640}.btn.danger{color:var(--red);border-color:#ecd7d3}.btn.small{padding:7px 10px;font-size:11px}.hero{background:linear-gradient(115deg,#1b382c,#395744);border-radius:18px;color:white;padding:29px 31px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero:after{content:"✳";position:absolute;right:22%;top:-65px;font-size:240px;color:#fff;opacity:.045}.hero h2{font-size:25px;line-height:1.4;margin:8px 0}.hero p{font-size:12px;color:#c4d0c5;line-height:1.8;margin:0;max-width:560px}.hero .btn{position:relative;z-index:1;white-space:nowrap;background:#d8e6d0;border:0;color:#294533}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:17px 0 26px}.stat,.panel,.card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 3px 14px #26372b05}.stat{padding:17px 18px}.stat label{font-size:11px;color:var(--muted);font-weight:700}.stat strong{display:block;font-size:28px;margin:9px 0 3px;letter-spacing:-1px}.stat small{font-size:10px;color:#87938b}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 13px}.section-head h2{font-size:17px;margin:0}.section-head p{font-size:11px;color:var(--muted);margin:4px 0 0}.panel{padding:20px;margin-bottom:15px}.panel h3{font-size:14px;margin:0 0 10px}.panel p{font-size:12px;color:var(--muted);line-height:1.8}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.gear{padding:15px;background:#fff;border:1px solid var(--line);border-radius:13px;min-width:0;transition:.15s}.gear:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.gear-top{display:flex;justify-content:space-between;align-items:center}.gear-icon{width:39px;height:39px;border-radius:11px;background:#edf2eb;display:grid;place-items:center;font-size:19px}.pill{font-size:10px;font-weight:800;padding:5px 8px;border-radius:30px;background:#e9f1e8;color:#4d7351}.pill.verify{background:#eef0f8;color:#68729a}.pill.wish{background:#fbf0df;color:#946a2d}.pill.repair{background:#f8e9e5;color:#9a5549}.gear h3{font-size:14px;margin:13px 0 5px;overflow-wrap:anywhere}.gear .meta{font-size:11px;line-height:1.7;color:#77847b;min-height:36px}.gear-foot{border-top:1px solid #edf0ec;padding-top:10px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#748078}.gear-foot button{border:0;background:transparent;color:#365b42;font-weight:800;font-size:11px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:12px}.search{flex:1;min-width:190px;border:1px solid var(--line);background:white;border-radius:10px;padding:11px 13px;font-size:12px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.filter{border:1px solid #dfe6df;background:white;border-radius:30px;padding:7px 11px;color:#66766b;font-size:11px;font-weight:700}.filter.active{background:var(--forest);color:white;border-color:var(--forest)}.notice{padding:11px 14px;background:#f1f4ed;border-radius:10px;color:#647568;font-size:11px;line-height:1.7;margin-bottom:15px}.empty{padding:38px 15px;border:1px dashed #d7dfd6;border-radius:12px;text-align:center;color:#829087;font-size:12px;background:#fff}.view{display:none}.view.active{display:block}.modal{position:fixed;inset:0;background:#10221888;display:none;align-items:center;justify-content:center;padding:15px;z-index:20}.modal.open{display:flex}.modal-box{background:white;border-radius:17px;width:min(760px,100%);max-height:92vh;overflow:auto;box-shadow:0 24px 80px #0003}.modal-head{padding:20px 23px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;z-index:2}.modal-head h2{font-size:18px;margin:0}.x{border:0;background:#f0f3ef;border-radius:8px;width:32px;height:32px;font-size:18px}.form-body{padding:20px 23px}.step-title{font-size:11px;font-weight:850;color:#58715e;letter-spacing:.5px;margin:7px 0 12px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:6px;font-size:11px;color:#536258;font-weight:750;min-width:0}.field.full{grid-column:1/-1}.field input,.field select,.field textarea{width:100%;min-width:0;border:1px solid #dce4dc;border-radius:9px;padding:10px 11px;background:#fff;color:var(--ink);font-size:12px}.field textarea{min-height:70px;resize:vertical}.hint{font-size:10px;color:#8b978e;font-weight:450;line-height:1.5}.spec-box{margin-top:17px;padding:15px;background:#f7f9f6;border:1px solid #e5ebe3;border-radius:12px}.spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.modal-foot{padding:15px 23px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;position:sticky;bottom:0;background:#fff}.tag{display:inline-block;padding:3px 6px;border-radius:5px;background:#f0f3ef;color:#65756a;font-size:9px;margin:2px}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #edf0ec;font-size:12px}.row:last-child{border:0}.muted{color:var(--muted)}.data-actions{display:flex;gap:8px;flex-wrap:wrap}.brand-suggest{font-size:10px;color:#839087}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1d382d;color:#fff;padding:11px 17px;border-radius:30px;font-size:12px;z-index:30;box-shadow:var(--shadow);display:none}.toast.show{display:block}.hidden{display:none!important}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){.sidebar{position:sticky;top:0;width:100%;height:auto;padding:12px 12px 7px}.logo{padding:0 6px 9px}.logo-mark{font-size:17px}.logo small{display:none}.nav-label,.side-foot{display:none}.navs{display:flex;overflow-x:auto;gap:4px}.nav{white-space:nowrap;padding:9px 10px;font-size:11px;margin:0}.nav .ico{font-size:14px}.main{margin:0;padding:20px 13px 60px}.topbar{align-items:flex-start;flex-direction:column;margin-bottom:18px}.top-actions{width:100%}.page-title{font-size:26px}.hero{padding:21px;align-items:flex-start;flex-direction:column}.hero h2{font-size:21px}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:24px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gear{padding:12px}.gear h3{font-size:12px}.gear .meta{font-size:10px}.fields,.spec-grid,.split{grid-template-columns:1fr}.field.full{grid-column:auto}.modal{padding:7px;align-items:flex-end}.modal-box{max-height:94vh;border-radius:17px 17px 0 0}.form-body{padding:16px}.modal-head{padding:15px 17px}.modal-foot{padding:12px 17px}}@media(max-width:360px){.grid{grid-template-columns:1fr}}
+
+/* UX-01 Brand system */
+.logo{padding:0 12px 28px;}
+.logo-lockup{display:flex;align-items:center;gap:10px;}
+.logo-symbol{width:36px;height:36px;flex:0 0 36px;border:1px solid #ffffff35;border-radius:11px;display:grid;place-items:center;background:#ffffff0c;color:#d5e4cf;font-size:18px;}
+.logo-wordmark{font-size:20px;font-weight:850;letter-spacing:.4px;line-height:1.15;white-space:nowrap;}
+.logo-wordmark span{color:#b7d1a9;}
+.logo small{display:block;color:#b1c0b4;font-size:9px;letter-spacing:1.9px;margin:9px 0 0 46px;}
+.side-foot{border-top:1px solid #ffffff20;padding:17px 12px 8px;color:#b6c7b8;}
+.side-foot .brand-belief{font-size:10px;letter-spacing:1.2px;color:#d2dfce;font-weight:750;margin-bottom:5px;}
+.side-foot .brand-note{font-size:10px;color:#91a597;line-height:1.65;}
+.topbar .eyebrow{letter-spacing:1.7px;}
+.workspace-wrap{display:flex;align-items:center;gap:8px;padding:5px 8px 5px 11px;border:1px solid #dce4da;background:#fff;border-radius:11px;}
+.workspace-wrap .workspace-label{font-size:10px;color:#718078;font-weight:700;white-space:nowrap;}
+.workspace{border:0;background:transparent;padding:6px 4px;outline-offset:3px;}
+.hero{background:linear-gradient(118deg,#18372b 0%,#294b39 58%,#48664b 100%);padding:34px 36px;min-height:210px;}
+.hero:after{content:"";width:280px;height:180px;right:9%;top:18px;border:1px solid #ffffff18;border-radius:48% 52% 0 0;transform:rotate(-13deg);font-size:0;opacity:1;}
+.hero:before{content:"";position:absolute;width:210px;height:130px;right:15%;top:58px;border:1px solid #ffffff18;border-radius:50% 50% 0 0;transform:rotate(12deg);}
+.hero-brand{position:relative;z-index:1;}
+.hero-kicker{font-size:10px;letter-spacing:2.5px;color:#c2d4bd;font-weight:800;margin-bottom:13px;}
+.hero h2{font-size:clamp(27px,3vw,36px);line-height:1.25;letter-spacing:.2px;margin:0 0 8px;font-weight:800;}
+.hero-en{font-size:10px;letter-spacing:2.2px;color:#d4e0d1;font-weight:750;margin:0 0 17px;}
+.hero p{font-size:13px;color:#d0dbd0;line-height:1.8;margin:0;max-width:540px;}
+.hero .btn{padding:12px 16px;border-radius:10px;}
+.workspace-wrap:focus-within{border-color:#8ca88c;box-shadow:0 0 0 3px #55765d18;}
+@media(max-width:720px){
+ .logo{padding:0 6px 10px;}
+ .logo-wordmark{font-size:17px;}
+ .logo-symbol{width:31px;height:31px;flex-basis:31px;font-size:16px;}
+ .logo small{display:block;font-size:8px;margin:5px 0 0 41px;letter-spacing:1.4px;}
+ .side-foot{display:none;}
+ .workspace-wrap{width:100%;justify-content:space-between;}
+ .workspace{flex:1;min-width:0;}
+ .hero{min-height:0;padding:25px 22px;}
+ .hero:before{right:-10px;top:42px;}
+ .hero:after{right:-55px;top:5px;}
+ .hero h2{font-size:27px;}
+ .hero-en{font-size:9px;letter-spacing:1.7px;}
+}
+
+
+/* UX-02 form controls */
+.brand-field{position:relative;}
+.brand-picker{position:absolute;z-index:8;top:43px;left:0;right:0;max-height:220px;overflow:auto;background:#fff;border:1px solid #dce4dc;border-radius:10px;box-shadow:0 12px 30px #1d382d20;padding:5px;}
+.brand-option{display:flex;width:100%;border:0;background:#fff;text-align:left;padding:9px 10px;border-radius:7px;font-size:12px;color:var(--ink);}
+.brand-option:hover,.brand-option:focus{background:#edf3eb;outline:0;}
+.brand-option.custom{color:#456b4c;font-weight:750;border-top:1px solid var(--line);border-radius:0 0 7px 7px;}
+.scene-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.scene-chip{border:1px solid #dce4dc;background:#fff;border-radius:30px;padding:8px 13px;color:#637268;font-size:11px;font-weight:700;}
+.scene-chip.selected{background:#e6efe4;border-color:#9bb59a;color:#2f5939;box-shadow:inset 0 0 0 1px #9bb59a;}
+.scene-chip.legacy{border-style:dashed;color:#8a6840;background:#fbf4e9;}
+ .scene-chip.legacy.selected{background:#f5ead8;border-color:#c6a777;}
+.scene-chip:focus-visible,.filter:focus-visible,.btn:focus-visible{outline:3px solid #a9c6a5;outline-offset:2px;}
+.detail-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:15px;}
+#detailContent h3{font-size:13px;margin:14px 0 8px;color:#3d5944;}
+#detailContent p{font-size:12px;line-height:1.8;color:var(--muted);}
+
+[hidden]{display:none!important}.form-group{margin-top:12px;border:1px solid var(--line,#deded6);border-radius:10px;padding:10px 12px}.form-group summary{cursor:pointer;font-weight:600}.form-group .fields,.form-group .spec-grid{margin-top:10px}#fitFields{margin-top:12px}
+.spec-more{grid-column:1/-1;margin-top:2px}#editorModal input::placeholder,#editorModal textarea::placeholder{font-weight:400;opacity:.75}</style></head>
+<body>
+<div class="app">
+<aside class="sidebar"><div class="logo"><div class="logo-lockup"><div class="logo-symbol" aria-hidden="true">⌁</div><div class="logo-wordmark">拾光<span>山野</span>Lab</div></div><small>GEAR FOR EVERY JOURNEY</small></div><div class="nav-label">WORKSPACE</div><nav class="navs"><button class="nav active" data-view="home"><span class="ico">⌂</span>总览</button><button class="nav" data-view="inventory"><span class="ico">▤</span>装备库</button><button class="nav" data-view="trips"><span class="ico">⌁</span>出行计划</button><button class="nav" data-view="assets"><span class="ico">◫</span>资产分析</button><button class="nav" data-view="settings"><span class="ico">⚙</span>数据管理</button></nav><div class="side-foot"><div class="brand-belief">LESS GEAR, MORE OUT THERE.</div><div class="brand-note">把装备整理好，把目光留给山野。<br>每一段旅程，都值得认真准备。</div></div></aside>
+<main class="main"><header class="topbar"><div><div class="eyebrow">YOUR EQUIPMENT, ORGANIZED</div><h1 class="page-title" id="pageTitle">装备总览</h1><p class="subtitle" id="pageSub">管理每一件装备，准备每一次出发。</p></div><div class="top-actions"><label class="workspace-wrap" for="workspace"><span class="workspace-label">当前空间</span><select class="workspace" id="workspace" aria-label="切换数据空间"><option value="personal">我的装备 · 真实资产</option><option value="demo">演示空间 · 体验数据</option></select></label><button class="btn primary" id="addTop">＋ 新增装备</button></div></header>
+<section class="view active" id="home"><div class="hero"><div class="hero-brand"><div class="hero-kicker">拾光山野 LAB · OUTDOOR JOURNAL</div><h2>记录热爱，探索山野。</h2><div class="hero-en">GEAR FOR EVERY JOURNEY.</div><p>管理每一件装备，准备每一次出发。让装备记录、旅程计划与户外探索，都有迹可循。</p></div><button class="btn" onclick="showView('inventory')">整理我的装备 <span aria-hidden="true">→</span></button></div><div class="stats" id="stats"></div><div class="section-head"><div><h2>最近添加</h2><p>只展示当前数据空间中的装备</p></div><button class="btn small" onclick="showView('inventory')">查看全部</button></div><div class="grid" id="recent"></div><div class="section-head"><div><h2>数据完整度</h2><p>未知信息保持为空，不会擅自补全</p></div></div><div class="panel" id="quality"></div></section>
+<section class="view" id="inventory"><div class="notice" id="spaceNotice">真实资产与演示数据严格分开。切换数据空间不会复制、合并或覆盖另一空间的数据。</div><div class="toolbar"><input class="search" id="search" placeholder="搜索装备名称、品牌、型号、分类…"><button class="btn" id="clearFilters">重置筛选</button></div><div class="filters" id="statusFilters"></div><div class="filters" id="categoryFilters"></div><div class="filters" id="sceneFilters" aria-label="适用场景筛选"></div><div class="toolbar" id="advancedFilters"><select class="workspace" id="subcategoryFilter" aria-label="子分类筛选"><option value="all">全部子分类</option></select><select class="workspace" id="typeFilter" aria-label="具体类型筛选"><option value="all">全部类型</option></select><select class="workspace" id="sortFilter" aria-label="装备排序"><option value="updated">最近更新</option><option value="name">名称 A-Z</option><option value="price">价格从低到高</option><option value="weight">重量从轻到重</option></select></div><div class="section-head"><div><h2 id="inventoryCount">装备清单</h2><p>支持搜索、筛选、编辑与复制新增</p></div><button class="btn primary" onclick="openEditor()">＋ 新增装备</button></div><div class="grid" id="gearGrid"></div></section>
+<section class="view" id="trips"><div class="panel"><h3>出行计划 · 开发中</h3><p>下一阶段将接入活动模板、装备类型匹配、打包核对和实际使用确认。本轮先完成装备数据底座，避免先做一个看起来智能、实际却把库存认错的清单。</p><div class="notice">计划中的核心规则：已拥有且可用的装备才能自动匹配；待确认装备单独提示；想购买装备绝不进入库存。</div></div></section>
+<section class="view" id="assets"><div class="section-head"><div><h2>资产概览</h2><p>只统计当前数据空间中明确录入的值</p></div></div><div class="stats" id="assetStats"></div><div class="panel"><h3>资产口径</h3><p>未知价格不计入金额合计；未知重量不按 0 克处理。当前版本暂不计算折旧估值，避免在购买日期和实际价格缺失时产生虚假精确值。</p></div><div class="panel"><div class="eyebrow">ABOUT SHIGUANG OUTDOOR LAB</div><h3 style="margin-top:8px">LESS GEAR, MORE OUT THERE.</h3><p>把装备整理好，把目光留给山野。每一段旅程，都值得认真准备。</p></div></section>
+<section class="view" id="settings"><div class="panel"><h3>数据空间</h3><p>真实资产与演示空间分别存储。演示数据可随时重置，不影响真实装备。首次打开会初始化候选真实装备记录，用户可以在装备库中修改或删除。</p><div class="row"><span>当前空间</span><strong id="currentSpace">我的装备</strong></div><div class="row"><span>当前空间装备数</span><strong id="spaceCount">0</strong></div></div><div class="panel"><h3>数据备份与恢复</h3><p>导出当前空间为 JSON 文件。导入会覆盖当前空间，执行前必须确认。建议定期备份。</p><div class="data-actions"><button class="btn primary" id="exportBtn">导出当前空间</button><button class="btn" id="importBtn">导入 JSON</button><input class="hidden" id="importFile" type="file" accept="application/json,.json"></div></div><div class="panel"><h3>品牌库</h3><p>常用品牌可搜索选择；输入新品牌并保存装备后，会自动加入当前空间的品牌候选列表。</p><div id="brandList"></div></div><div class="panel"><h3>演示数据管理</h3><p>恢复演示数据只会重置演示空间，不会触碰真实资产。</p><button class="btn danger" id="resetDemo">重置演示数据</button></div><div class="panel"><h3>本地数据说明</h3><p>数据使用 IndexedDB 保存在当前浏览器。清理浏览器站点数据、使用无痕模式或更换设备可能导致数据不可用。当前版本没有账号体系和云同步。</p></div></section>
+</main></div>
+<div class="modal" id="editorModal"><div class="modal-box"><div class="modal-head"><h2 id="modalTitle">新增装备</h2><button class="x" id="closeModal">×</button></div><form id="gearForm"><div class="form-body"><div class="step-title">01 · 装备归类</div><div class="fields"><label class="field">装备系统 *<select id="category" required></select></label><label class="field">子分类<select id="subcategory"></select></label><label class="field">具体类型<select id="type"></select></label></div><div id="gearInputs" hidden><div class="step-title" style="margin-top:20px">02 · 基础信息</div><div class="fields"><label class="field">装备名称 *<input id="name" maxlength="100"  required></label><label class="field brand-field">品牌<input id="brand" autocomplete="off" placeholder="搜索或输入品牌"><div id="brandPickerResults" class="brand-picker hidden" role="listbox" aria-label="品牌候选"></div><span class="hint">列表里没有的品牌也可以直接填。</span></label><label class="field">归属状态 *<select id="ownership"><option value="owned">已拥有</option><option value="verify">待确认</option><option value="wish">想购买</option></select></label><label class="field" data-ownership-field="wish">目标价格（元）<input id="targetPrice" type="number" min="0" step="0.01" ></label></div><div class="spec-box" id="specSection"><div class="step-title">03 · 专属参数 <span class="muted">全部选填</span></div><p class="hint" id="specHint"></p><div class="spec-grid" id="specFields"></div></div><div class="fields" id="fitFields"><label class="field"><span id="sizeLabel">尺码 / 规格</span><input id="size" maxlength="50" placeholder="例如：M、32-S、20L"></label><label class="field"><span id="weightLabel">重量（克）</span><input id="weight" type="number" min="0" step="0.1" ></label></div><details class="form-group" id="purchaseGroup"><summary>购买与使用</summary><div class="fields"><label class="field" data-ownership-field="owned">购买价格（元）<input id="price" type="number" min="0" step="0.01" ></label><label class="field" data-ownership-field="owned">购买日期<input id="purchaseDate" type="date"></label><label class="field" data-ownership-field="owned">生命周期<select id="lifecycle"><option value="active">在用</option><option value="idle">闲置</option><option value="repair">维修中</option><option value="retired">已退役</option><option value="sold">已出售</option></select></label></div></details><details class="form-group" id="sceneGroup"><summary>适用场景与标签</summary><div class="fields"><div class="field full"><span>适用场景</span><div class="scene-chips" id="sceneChips" role="group" aria-label="选择适用场景"></div><span class="hint">可以选多个。</span></div><div class="field full"><span id="tagLabel">功能标签</span><div class="scene-chips" id="tagChoices" role="group" aria-labelledby="tagLabel"></div><div class="scene-chips"><input id="customTag" aria-label="自定义标签" placeholder="自定义标签" maxlength="40"><button type="button" class="btn small" id="addTag">添加</button></div></div></div></details><details class="form-group" id="extraGroup"><summary>补充信息</summary><div class="fields"><label class="field">型号<input id="model" maxlength="100" ></label><label class="field">产品系列<input id="series" maxlength="80" ></label><label class="field">颜色<input id="color" maxlength="40" ></label><label class="field full">备注<textarea id="notes" maxlength="1000" ></textarea></label></div></details></div></div><div class="modal-foot"><div><button type="button" class="btn danger small hidden" id="deleteBtn">删除装备</button></div><div style="display:flex;gap:8px"><button type="button" class="btn" id="cancelBtn">取消</button><button type="submit" id="saveGearBtn" class="btn primary">保存装备</button></div></div></form></div></div><div class="modal" id="detailModal"><div class="modal-box"><div class="modal-head"><h2 id="detailTitle">装备详情</h2><button class="x" id="closeDetail">×</button></div><div class="form-body" id="detailContent"></div><div class="modal-foot"><button class="btn" id="detailDuplicate">复制新增</button><div style="display:flex;gap:8px"><button class="btn" id="detailClose">关闭</button><button class="btn primary" id="detailEdit">编辑装备</button></div></div></div></div><div class="toast" id="toast"></div>
+<script>
+const DB_NAME='shiguang-outdoor-lab',DB_VERSION=1;let db,workspace='personal',currentEdit=null,allGears=[],activeStatus='all',activeCategory='all',currentSpecType=null,activeSceneFilters=[],activeSubcategory='all',activeType='all',activeSort='updated',currentDetail=null;
+const CATALOG={
+'背负系统':{'背包':['日用背包','徒步背包','重装背包','攻顶包','摄影背包'],'背负配件':['背包防雨罩','收纳包']},
+'睡眠系统':{'庇护':['帐篷','天幕','地布'],'睡眠':['羽绒睡袋','棉睡袋','睡垫','充气枕']},
+'服装系统':{'排汗层':['速干衣','速干裤','贴身层'],'保暖层':['抓绒衣','羽绒服','化纤棉服','保暖裤'],'防护层':['硬壳冲锋衣','软壳衣','风壳','雨衣','软壳裤'],'配件':['帽子','手套','袜子']},
+'鞋靴系统':{'徒步鞋':['低帮徒步鞋','中帮徒步鞋','高帮徒步鞋','越野跑鞋'],'登山鞋':['高山靴','冰雪靴','溯溪鞋']},
+'炊事系统':{'炉具':['炉头','气罐','酒精炉'],'餐具':['套锅','餐具','杯具'],'厨房配件':['折叠桌椅','挡风板']},
+'水处理系统':{'水具':['水壶','水袋','保温杯'],'净水':['滤水器','净水药片']},
+'电子与导航':{'照明':['头灯','营地灯','车灯'],'电源':['充电宝','相机电池','充电器'],'导航':['运动手表','GPS设备'],'电子设备':['对讲机','卫星通信设备']},
+'摄影系统':{'相机':['相机机身'],'镜头':['定焦镜头','变焦镜头','长焦镜头','广角镜头'],'摄影配件':['三脚架','滤镜','相机包','快门线']},
+'骑行系统':{'自行车':['公路车','山地车','砾石车'],'骑行装备':['骑行头盔','骑行手套','骑行服','骑行鞋'],'维修与训练':['骑行台','打气筒','补胎工具']},
+'安全与医疗':{'防护':['头盔','冰爪','安全带'],'急救':['急救包','急救用品'],'导航通信':['求生哨','应急信标']},
+'工具与维修':{'工具':['多功能工具钳','刀具','登山杖','维修工具'],'营地配件':['地钉','营绳']},
+'旅行收纳':{'收纳':['收纳袋','防水袋','洗漱包']},
+'其他':{'其他':['其他装备']}
+};
+const SPECS={
+'背包':[['capacity','容量','number','L'],['weightSpec','空包重量','number','g'],['backSystem','背负结构','text','例如：轻量化背负'],['torso','背长 / 尺码','text','例如：S/M'],['fabric','面料','text','例如：Robic Nylon']],
+'帐篷':[['capacity','容纳人数','number','人'],['season','适用季节','select',['三季','四季','冬季 / 高山']],['waterproof','防水指数','number','mm'],['structure','结构','select',['自立','半自立','非自立']],['pole','帐杆材质','text','例如：DAC 铝杆']],
+'羽绒睡袋':[['fill','填充物','select',['鹅绒','鸭绒']],['fillWeight','充绒量','number','g'],['fillPower','蓬松度','number','FP'],['comfort','舒适温标','number','℃'],['limit','极限温标','number','℃']],
+'睡垫':[['rvalue','R值','number',''],['thickness','厚度','number','cm'],['length','长度','number','cm'],['padType','结构','select',['充气','自充气','闭孔泡沫']]],
+'抓绒衣':[['fabric','面料技术','text','例如：Polartec Power Grid'],['weightSpec','克重','number','g'],['fit','版型','select',['修身','常规','宽松']]],
+'羽绒服':[['fill','填充物','select',['鹅绒','鸭绒','化纤']],['fillWeight','填充量','number','g'],['fillPower','蓬松度','number','FP'],['shell','面料','text','例如：Pertex Quantum'],['waterRepellent','拒水处理','select',['有','无','未知']]],
+'硬壳冲锋衣':[['membrane','面料 / 膜技术','text','例如：GORE-TEX Pro'],['layers','层数','select',['2L','2.5L','3L']],['waterproof','防水指数','number','mm'],['breathability','透湿指标','text','例如：RET / MVTR'],['seam','压胶','select',['全压胶','重点压胶','未知']]],
+'软壳衣':[['fabric','面料','text',''],['windproof','防风性能','select',['强防风','中等防风','弱防风']],['stretch','弹性','select',['弹力','无弹力']]],
+'镜头':[['focal','焦段','text','例如：16–55 mm'],['aperture','最大光圈','text','例如：F2.8'],['mount','卡口','text','例如：Sony E'],['filter','滤镜口径','number','mm'],['stabilization','镜头防抖','select',['有','无']]],
+'变焦镜头':[['focal','焦段','text','例如：16–55 mm'],['aperture','最大光圈','text','例如：F2.8–4'],['mount','卡口','text','例如：Sony E'],['filter','滤镜口径','number','mm'],['stabilization','镜头防抖','select',['有','无']],['minFocus','最近对焦距离','number','cm'],['maxMagnification','最大放大倍率','text','例如：0.2×']],
+'定焦镜头':[['focal','焦距','number','mm'],['aperture','最大光圈','text','例如：F1.8'],['mount','卡口','text','例如：Sony E'],['filter','滤镜口径','number','mm'],['stabilization','镜头防抖','select',['有','无']],['minFocus','最近对焦距离','number','cm']],
+'长焦镜头':[['focal','焦段','text','例如：70–350 mm'],['aperture','最大光圈','text','例如：F4.5–6.3'],['mount','卡口','text','例如：Sony E'],['filter','滤镜口径','number','mm'],['stabilization','镜头防抖','select',['有','无']],['minFocus','最近对焦距离','number','cm'],['maxMagnification','最大放大倍率','text','例如：0.23×']],
+'广角镜头':[['focal','焦段','text','例如：10–20 mm'],['aperture','最大光圈','text','例如：F4'],['mount','卡口','text','例如：Sony E'],['filter','滤镜口径','number','mm'],['stabilization','镜头防抖','select',['有','无']],['minFocus','最近对焦距离','number','cm']],
+'相机机身':[['sensor','传感器','text','例如：APS-C'],['mp','有效像素','number','MP'],['mount','卡口','text','例如：Sony E'],['ibis','机身防抖','select',['有','无']]],
+'运动手表':[['battery','续航','text','例如：GPS 模式 xx 小时'],['water','防水等级','text','例如：5 ATM'],['gnss','定位系统','text','GPS / 北斗 / Galileo'],['connectivity','连接协议','text','ANT+ / BLE']],
+'公路车':[['frame','车架材料','select',['铝合金','碳纤维','钢','钛合金']],['groupset','变速套件','text',''],['size','车架尺码','text',''],['wheel','轮径','text','例如：700C']],
+'骑行台':[['resistance','阻力类型','text',''],['power','最大功率','number','W'],['slope','模拟坡度','number','%'],['accuracy','功率精度','text','例如：±2%'],['protocol','连接协议','text','ANT+ FE-C / BLE']],
+'头灯':[['lumens','最大亮度','number','lm'],['runtime','续航','text',''],['battery','供电方式','select',['内置电池','可更换电池','混合']],['water','防水等级','text','IPX 等级']],
+'炉头':[['fuel','燃料类型','select',['高山气','液体燃料','酒精','固体燃料']],['power','功率','number','W'],['ignition','点火方式','select',['电子点火','手动点火']]],
+'滤水器':[['micron','过滤精度','number','μm'],['flow','流速','text','L/min'],['life','滤芯寿命','text',''],['backflush','可否反冲洗','select',['可','不可']]],
+'徒步鞋':[['upper','鞋面材质','text',''],['membrane','防水膜','text',''],['outsole','大底','text','例如：Vibram'],['terrain','适用地形','text','']]
+};
+const BRANDS=['Arc\'teryx','Patagonia','Montane','Rab','TwoSevenths','始祖鸟','巴塔哥尼亚','凯乐石','牧高笛','Naturehike','Mystery Ranch','神秘农场','Sony','索尼','COROS','高驰','Garmin','佳明','美利达','Merida','CYCPLUS','Black Diamond','MSR','NEMO','Therm-a-Rest','Salomon','HOKA','La Sportiva','迪卡侬'];
+const SEED_PERSONAL=[
+{id:'gear-beta-ar',name:'Beta AR',brand:"Arc'teryx",model:'Beta AR',category:'服装系统',subcategory:'防护层',type:'硬壳冲锋衣',ownership:'owned',lifecycle:'active',scenes:['徒步','登山','旅行'],tags:['硬壳','防水','防风'],price:null,weight:null,sourceNote:'此前明确记录为已拥有；价格、重量和尺码待补'},
+{id:'gear-r1-air',name:'R1 Air',brand:'Patagonia',model:'R1 Air',category:'服装系统',subcategory:'保暖层',type:'抓绒衣',ownership:'owned',lifecycle:'active',scenes:['徒步','登山','露营'],tags:['抓绒','保暖','透气'],price:null,weight:null,sourceNote:'此前明确记录为已拥有；具体尺码待补'},
+{id:'gear-pack-20',name:'20L 背包',brand:'',category:'背负系统',subcategory:'背包',type:'日用背包',ownership:'owned',lifecycle:'active',scenes:['徒步','旅行','摄影'],tags:[],price:null,weight:null,sourceNote:'容量已知，品牌和型号待补'},
+{id:'gear-pack-48',name:'48L 背包',brand:'',category:'背负系统',subcategory:'背包',type:'徒步背包',ownership:'owned',lifecycle:'active',scenes:['徒步','露营','登山'],tags:[],price:null,weight:null,sourceNote:'容量已知，品牌和型号待补'},
+{id:'gear-pack-75',name:'75L 背包',brand:'',category:'背负系统',subcategory:'背包',type:'重装背包',ownership:'owned',lifecycle:'active',scenes:['徒步','露营','登山'],tags:[],price:null,weight:null,sourceNote:'容量已知，品牌和型号待补'},
+{id:'gear-a6700',name:'A6700',brand:'Sony',model:'ILCE-6700',category:'摄影系统',subcategory:'相机',type:'相机机身',ownership:'owned',lifecycle:'active',scenes:['摄影','旅行'],tags:['APS-C','微单'],price:null,weight:null,sourceNote:'此前明确记录为已拥有；具体配件不自动推断'},
+{id:'gear-merida',name:'斯特拉93',brand:'美利达',model:'Scultura 93',category:'骑行系统',subcategory:'自行车',type:'公路车',ownership:'owned',lifecycle:'active',scenes:['骑行'],tags:['公路车'],price:null,weight:null,sourceNote:'此前明确记录为已拥有；尺码和配置待补'},
+{id:'gear-apex4',name:'APEX 4',brand:'COROS',model:'APEX 4',category:'电子与导航',subcategory:'导航',type:'运动手表',ownership:'owned',lifecycle:'active',scenes:['徒步','登山','骑行'],tags:['运动手表','GPS'],price:null,weight:null,sourceNote:'此前明确提及使用；具体购买信息待补'}
+];
+const SEED_DEMO=[
+{id:'demo-tent',name:'轻量三季帐篷',brand:'NEMO',model:'示例型号',category:'睡眠系统',subcategory:'庇护',type:'帐篷',ownership:'owned',lifecycle:'active',scenes:['徒步','露营'],tags:['三季','轻量化'],price:1899,weight:1250,specs:{capacity:'2',season:'三季',waterproof:'1500',structure:'自立'}},
+{id:'demo-bag',name:'轻量羽绒睡袋',brand:'Rab',model:'示例型号',category:'睡眠系统',subcategory:'睡眠',type:'羽绒睡袋',ownership:'owned',lifecycle:'active',scenes:['徒步','露营'],tags:['羽绒','保暖'],price:2200,weight:680,specs:{fill:'鹅绒',fillWeight:'400',fillPower:'800',comfort:'-2'}},
+{id:'demo-headlamp',name:'登山头灯',brand:'Black Diamond',category:'电子与导航',subcategory:'照明',type:'头灯',ownership:'owned',lifecycle:'active',scenes:['徒步','露营'],tags:['照明'],price:399,weight:95,specs:{lumens:'400',runtime:'高亮 4h'}},
+{id:'demo-shell',name:'轻量风壳',brand:'Montane',category:'服装系统',subcategory:'防护层',type:'风壳',ownership:'wish',lifecycle:'active',scenes:['徒步','登山'],tags:['轻量化','防风'],targetPrice:700}
+];
+function uid(){return 'g_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,7)}const SCENE_OPTIONS=['徒步','登山','露营','骑行','摄影','旅行'];
+function parseList(v){return String(v??'').split(/[,，、;；]/).map(x=>x.trim()).filter(Boolean)}
+function normalizeScenes(v){const raw=Array.isArray(v)?v:parseList(v);return [...new Set(raw.map(x=>String(x).trim()).filter(Boolean))]}
+function selectedScenes(){return [...document.querySelectorAll('#sceneChips .scene-chip.selected')].map(x=>x.dataset.scene)}
+function renderSceneChips(values=[]){const selected=normalizeScenes(values);const legacy=selected.filter(x=>!SCENE_OPTIONS.includes(x));document.getElementById('sceneChips').innerHTML=[...SCENE_OPTIONS.map(x=>`<button type="button" class="scene-chip ${selected.includes(x)?'selected':''}" data-scene="${esc(x)}" aria-pressed="${selected.includes(x)}">${esc(x)}</button>`),...legacy.map(x=>`<button type="button" class="scene-chip legacy selected" data-scene="${esc(x)}" aria-pressed="true" title="历史自定义值，点击移除">${esc(x)} · 旧值 ×</button>`)].join('')}
+const commonTags=['轻量化','防水','防风','保暖','透气','速干','耐磨','便携'];
+let selectedTags=new Set();
+function renderTagChoices(){
+  const tags=[...new Set([...commonTags,...selectedTags])];
+  document.getElementById('tagChoices').innerHTML=tags.map(tag=>{
+    const selected=selectedTags.has(tag);
+    return `<button type="button" class="scene-chip${selected?' selected':''}" data-tag="${esc(tag)}" aria-pressed="${selected}">${esc(tag)}</button>`;
+  }).join('');
+}
+function addCustomTag(){
+  const input=document.getElementById('customTag');
+  const tag=input.value.trim();
+  if(!tag)return;
+  selectedTags.add(tag);
+  input.value='';
+  renderTagChoices();
+}
+document.getElementById('tagChoices').addEventListener('click',event=>{
+  const button=event.target.closest('[data-tag]');
+  if(!button)return;
+  const tag=button.dataset.tag;
+  if(selectedTags.has(tag))selectedTags.delete(tag);
+  else selectedTags.add(tag);
+  renderTagChoices();
+  const buttons=[...document.querySelectorAll('#tagChoices [data-tag]')];
+  (buttons.find(item=>item.dataset.tag===tag)||document.getElementById('customTag')).focus();
+});
+document.getElementById('addTag').addEventListener('click',addCustomTag);
+document.getElementById('customTag').addEventListener('keydown',event=>{
+  if(event.key==='Enter'&&!event.isComposing){event.preventDefault();addCustomTag();}
+});
+function toggleScene(button){button.classList.toggle('selected');button.setAttribute('aria-pressed',button.classList.contains('selected')?'true':'false')}
+function updateOwnershipFields(){const ownership=document.getElementById('ownership').value;document.getElementById('purchaseGroup').hidden=ownership!=='owned';document.querySelectorAll('[data-ownership-field]').forEach(el=>el.classList.toggle('hidden',el.dataset.ownershipField!==ownership));}
+function showBrandSuggestions(){const input=document.getElementById('brand'),box=document.getElementById('brandPickerResults'),q=input.value.trim().toLowerCase();const names=[...new Set([...BRANDS,...allGears.map(g=>g.brand).filter(Boolean)])].sort((a,b)=>a.localeCompare(b));const matches=names.filter(x=>x.toLowerCase().includes(q)).slice(0,12);box.innerHTML=matches.map(x=>`<button type="button" class="brand-option" role="option" data-brand="${esc(x)}">${esc(x)}</button>`).join('')+(input.value.trim()&&!names.some(x=>x.toLowerCase()===q)?`<button type="button" class="brand-option custom" role="option" data-brand="${esc(input.value.trim())}">＋ 使用自定义品牌「${esc(input.value.trim())}」</button>`:'');box.classList.toggle('hidden',!box.innerHTML);}
+function hasSpecValues(){return [...document.querySelectorAll('[data-spec]')].some(el=>el.value!=='')}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function money(v){return v==null?'未记录':'¥'+Number(v).toLocaleString('zh-CN',{maximumFractionDigits:2})}function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2300)}
+function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains('gears')){const s=d.createObjectStore('gears',{keyPath:'id'});s.createIndex('workspace','workspace',{unique:false})}if(!d.objectStoreNames.contains('brands')){const s=d.createObjectStore('brands',{keyPath:'id'});s.createIndex('workspace','workspace',{unique:false})}if(!d.objectStoreNames.contains('meta'))d.createObjectStore('meta',{keyPath:'key'})};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+function tx(store,mode='readonly'){return db.transaction(store,mode).objectStore(store)}function reqp(r){return new Promise((resolve,reject)=>{r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}async function getAll(store){return reqp(tx(store).getAll())}async function put(store,obj){return reqp(tx(store,'readwrite').put(obj))}async function del(store,id){return reqp(tx(store,'readwrite').delete(id))}async function getMeta(key){return reqp(tx('meta').get(key))}async function setMeta(key,value){return put('meta',{key,value})}
+async function seedIfNeeded(space){const key='seeded_'+space,meta=await getMeta(key);if(meta)return;const source=space==='personal'?SEED_PERSONAL:SEED_DEMO;for(const g of source)await put('gears',{...g,workspace:space,createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),specs:g.specs||{},price:g.price??null,weight:g.weight??null,uses:0});await setMeta(key,true);}
+async function load(){allGears=(await getAll('gears')).filter(g=>g.workspace===workspace);renderAll()}
+async function migrateSceneData(){const rows=await getAll('gears');for(const g of rows){if(!Array.isArray(g.scenes)){const converted=normalizeScenes(g.scenes||[]);const unknown=converted.filter(x=>!SCENE_OPTIONS.includes(x));if(unknown.length)console.warn('Scene migration retained legacy values:',g.id,unknown);g.scenes=converted;await put('gears',g)}}}
+function badge(status){return status==='owned'?'<span class="pill">已拥有</span>':status==='wish'?'<span class="pill wish">想购买</span>':'<span class="pill verify">待确认</span>'}function lifecycleLabel(s){return ({active:'在用',idle:'闲置',repair:'维修中',retired:'已退役',sold:'已出售'})[s]||'在用'}function iconFor(g){const map={'背负系统':'🎒','睡眠系统':'⛺','服装系统':'🧥','鞋靴系统':'🥾','炊事系统':'🍳','水处理系统':'💧','电子与导航':'🔦','摄影系统':'📷','骑行系统':'🚲','安全与医疗':'🩹','工具与维修':'🧰','旅行收纳':'🧳','其他':'🧭'};return map[g.category]||'🧭'}
+function card(g){const specs=Object.entries(g.specs||{}).filter(([,v])=>v!==''&&v!=null).slice(0,2).map(([k,v])=>`<span class="tag">${esc(k)}：${esc(v)}</span>`).join('');return `<article class="gear"><div class="gear-top"><div class="gear-icon">${iconFor(g)}</div>${badge(g.ownership)}</div><h3>${esc(g.name)}</h3><div class="meta">${esc(g.brand||'品牌待补')} · ${esc(g.category)} / ${esc(g.type||g.subcategory||'类型待补')}<br>${esc(lifecycleLabel(g.lifecycle))} · ${g.weight==null?'重量待补':g.weight+'g'} ${specs}</div><div class="gear-foot"><span>${g.ownership==='wish'?'目标 '+money(g.targetPrice):money(g.price)}</span><span style="display:flex;gap:7px"><button onclick="openEditor('${esc(g.id)}',true)">复制</button><button onclick="openDetail('${esc(g.id)}')">查看详情 ↗</button></span></div></article>`}
+function renderAll(){const personal=allGears,owned=personal.filter(g=>g.ownership==='owned'&&!['sold','retired'].includes(g.lifecycle)),verify=personal.filter(g=>g.ownership==='verify'),wish=personal.filter(g=>g.ownership==='wish'),knownWeight=owned.filter(g=>g.weight!=null),totalWeight=knownWeight.reduce((s,g)=>s+Number(g.weight),0),knownPrice=owned.filter(g=>g.price!=null),totalPrice=knownPrice.reduce((s,g)=>s+Number(g.price),0);document.getElementById('stats').innerHTML=[['已拥有',owned.length,'件当前持有'],['待确认',verify.length,'件需要核实'],['想购买',wish.length,'件购买关注'],['已记录重量',knownWeight.length,`${(totalWeight/1000).toFixed(2)} kg · 仅统计已知重量`]].map(x=>`<div class="stat"><label>${x[0]}</label><strong>${x[1]}</strong><small>${x[2]}</small></div>`).join('');document.getElementById('recent').innerHTML=personal.length?personal.slice().sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).slice(0,3).map(card).join(''):'<div class="empty">当前空间还没有装备</div>';document.getElementById('quality').innerHTML=`<div class="row"><span>已记录价格</span><strong>${knownPrice.length} / ${owned.length} 件</strong></div><div class="row"><span>已记录重量</span><strong>${knownWeight.length} / ${owned.length} 件</strong></div><div class="row"><span>累计已知购入金额</span><strong>${money(totalPrice)}</strong></div><p>缺少价格或重量的装备不会按 0 计算。优先完善常用装备的规格、重量和购买信息。</p>`;renderInventory();document.getElementById('assetStats').innerHTML=[['当前持有装备',owned.length+' 件'],['累计已知购入金额',money(totalPrice)],['已知装备总重量',(totalWeight/1000).toFixed(2)+' kg'],['待核实记录',verify.length+' 件']].map(x=>`<div class="stat"><label>${x[0]}</label><strong style="font-size:22px">${x[1]}</strong></div>`).join('');document.getElementById('currentSpace').textContent=workspace==='personal'?'我的装备 · 真实资产':'演示空间 · 体验数据';document.getElementById('spaceCount').textContent=allGears.length+' 件';renderBrandList()}
+function renderAdvancedFilters(){const sub=document.getElementById('subcategoryFilter'),type=document.getElementById('typeFilter');const subs=activeCategory==='all'?[...new Set(Object.values(CATALOG).flatMap(x=>Object.keys(x)))].sort():Object.keys(CATALOG[activeCategory]||{});const categoryEntries=Object.entries(CATALOG).filter(([cat])=>activeCategory==='all'||cat===activeCategory);const types=[...new Set(categoryEntries.flatMap(([,subs])=>Object.entries(subs).filter(([sub])=>activeSubcategory==='all'||sub===activeSubcategory).flatMap(([,items])=>items)))].sort();sub.innerHTML='<option value="all">全部子分类</option>'+subs.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');sub.value=subs.includes(activeSubcategory)?activeSubcategory:'all';if(sub.value==='all'&&activeSubcategory!=='all')activeSubcategory='all';type.innerHTML='<option value="all">全部类型</option>'+types.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');type.value=types.includes(activeType)?activeType:'all';if(type.value==='all'&&activeType!=='all')activeType='all';document.getElementById('sortFilter').value=activeSort;}
+function renderInventory(){const q=document.getElementById('search').value.trim().toLowerCase();const statuses=[['all','全部'],['owned','已拥有'],['verify','待确认'],['wish','想购买']];document.getElementById('statusFilters').innerHTML=statuses.map(([v,l])=>`<button class="filter ${activeStatus===v?'active':''}" onclick="activeStatus='${v}';renderInventory()">${l}</button>`).join('');const cats=['all',...Object.keys(CATALOG)];document.getElementById('categoryFilters').innerHTML=cats.map(v=>`<button class="filter ${activeCategory===v?'active':''}" onclick="activeCategory='${v}';activeSubcategory='all';activeType='all';renderInventory()">${v==='all'?'全部分类':v}</button>`).join('');document.getElementById('sceneFilters').innerHTML=[['all','全部场景'],...SCENE_OPTIONS.map(x=>[x,x])].map(([v,l])=>`<button class="filter ${(v==='all'?!activeSceneFilters.length:activeSceneFilters.includes(v))?'active':''}" data-scene-filter="${esc(v)}">${esc(l)}</button>`).join('');renderAdvancedFilters();let arr=allGears.filter(g=>(activeStatus==='all'||g.ownership===activeStatus)&&(activeCategory==='all'||g.category===activeCategory)&&(activeSubcategory==='all'||g.subcategory===activeSubcategory)&&(activeType==='all'||g.type===activeType)&&(!activeSceneFilters.length||normalizeScenes(g.scenes||[]).some(x=>activeSceneFilters.includes(x)))&&[g.name,g.brand,g.model,g.series,g.category,g.subcategory,g.type,...(g.tags||[])].join(' ').toLowerCase().includes(q));arr=arr.slice();if(activeSort==='name')arr.sort((a,b)=>(a.name||'').localeCompare(b.name||'','zh-CN'));else if(activeSort==='price')arr.sort((a,b)=>(a.price??Infinity)-(b.price??Infinity));else if(activeSort==='weight')arr.sort((a,b)=>(a.weight??Infinity)-(b.weight??Infinity));else arr.sort((a,b)=>(b.updatedAt||b.createdAt||'').localeCompare(a.updatedAt||a.createdAt||''));document.getElementById('inventoryCount').textContent=`装备清单 · ${arr.length} 件`;document.getElementById('gearGrid').innerHTML=arr.length?arr.map(card).join(''):'<div class="empty">没有找到匹配装备。试试调整筛选，或新增一件装备。</div>'}
+function openDetail(id){const g=allGears.find(x=>x.id===id);if(!g)return;currentDetail=id;document.getElementById('detailTitle').textContent=g.name;const specs=Object.entries(g.specs||{}).filter(([,v])=>v!==''&&v!=null).map(([k,v])=>{const field=specTemplate(g.type,g.subcategory).find(([key])=>key===k);const unit=specUnit(field);return `<div class="row"><span>${esc(field?.[1]||k)}</span><strong>${esc(v)}${unit?` ${esc(unit)}`:""}</strong></div>`}).join('')||'<p class="muted">暂无专属参数</p>';const fields=[['品牌',g.brand],['型号',g.model],['产品系列',g.series],['装备系统',g.category],['子分类',g.subcategory],['具体类型',g.type],['归属状态',g.ownership==='owned'?'已拥有':g.ownership==='wish'?'想购买':'待确认'],['生命周期',lifecycleLabel(g.lifecycle)],['尺码 / 规格',g.size],['颜色',g.color],['购买价格',money(g.price)],['目标价格',money(g.targetPrice)],['购买日期',g.purchaseDate],['重量',g.weight==null?'未记录':g.weight+' g']];document.getElementById('detailContent').innerHTML=`<div class="detail-tags">${normalizeScenes(g.scenes||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}${(g.tags||[]).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><h3>基础信息</h3>${fields.map(([k,v])=>`<div class="row"><span>${k}</span><strong>${v==null||v===''?'未记录':esc(v)}</strong></div>`).join('')}<h3 style="margin-top:20px">专属参数</h3>${specs}<h3 style="margin-top:20px">备注</h3><p>${g.notes?esc(g.notes):'暂无备注'}</p>`;document.getElementById('detailModal').classList.add('open')}
+function closeDetail(){document.getElementById('detailModal').classList.remove('open');currentDetail=null}
+function specContextKey(){return [document.getElementById('category').value,document.getElementById('subcategory').value,document.getElementById('type').value].join('::')}
+function captureSpecDraft(){if(!activeSpecKey||!activeSpecKey.split('::')[2])return;const values={...specDrafts[activeSpecKey]};document.querySelectorAll('#specFields [data-spec]').forEach(el=>{values[el.dataset.spec]=el.value});specDrafts[activeSpecKey||specContextKey()]=values;}
+function rememberCategorySelection(){const cat=document.getElementById('category')?.value;if(!cat)return;categorySelections[cat]={subcategory:document.getElementById('subcategory').value,type:document.getElementById('type').value};}
+function updateCategoryOptions(selectedCat,selectedSub,selectedType){const c=document.getElementById('category'),s=document.getElementById('subcategory'),t=document.getElementById('type');const categories=Object.keys(CATALOG);const cat=categories.includes(selectedCat)?selectedCat:(selectedCat?categories[0]:'');c.innerHTML='<option value="">请选择装备系统</option>'+categories.map(x=>`<option value="${esc(x)}" ${x===cat?'selected':''}>${esc(x)}</option>`).join('');c.value=cat;s.disabled=t.disabled=!cat;const subs=Object.keys(CATALOG[cat]||{});const remembered=categorySelections[cat]||{};const sub=subs.includes(selectedSub)?selectedSub:(subs.includes(remembered.subcategory)?remembered.subcategory:(subs[0]||''));s.innerHTML=subs.map(x=>`<option value="${esc(x)}" ${x===sub?'selected':''}>${esc(x)}</option>`).join('');const types=(CATALOG[cat]||{})[sub]||[];const type=types.includes(selectedType)?selectedType:(types.includes(remembered.type)?remembered.type:(types[0]||''));t.innerHTML=types.map(x=>`<option value="${esc(x)}" ${x===type?'selected':''}>${esc(x)}</option>`).join('');currentSpecType=type;rememberCategorySelection();renderSpecFields(specDrafts[specContextKey()]||{});}
+
+const primarySpecs={
+'背包':['capacity','torso'],'帐篷':['capacity','season'],'天幕':['capacity'],'羽绒睡袋':['comfort'],'棉睡袋':['comfort'],'睡垫':['rvalue','padType'],'抓绒衣':['fabric'],'羽绒服':['fillWeight','fillPower'],'硬壳冲锋衣':['membrane'],'软壳衣':['windproof'],'徒步鞋':['membrane'],'登山鞋':['membrane'],'镜头':['focal','aperture','mount'],'相机机身':['sensor','mount'],'运动手表':['battery'],'头灯':['lumens','battery'],'公路车':['groupset'],'自行车':['groupset'],'骑行台':['protocol'],'炉头':['fuel'],'滤水器':['life']
+};
+for(const type of ['水壶','水袋','保温杯']) SPECS[type]=[['capacity','容量','number','L']];
+SPECS['背包防雨罩']=[['fitCapacity','适配背包容量','text','例如：30–45 L']];
+SPECS['棉睡袋']=[['comfort','舒适温标','number','℃']];
+SPECS['急救用品']=[['expiry','有效期','date','']];
+function specTemplate(type,sub){
+  return SPECS[type]||SPECS[sub]||(sub==='登山鞋'?SPECS['徒步鞋']:sub==='自行车'?SPECS['公路车']:[]);
+}
+function specUnit(field){return field?.[2]==='number'?(field[3]||''):''}
+function renderSpecFields(existing={}){
+  const get=id=>document.getElementById(id);
+  const category=get('category').value,sub=get('subcategory').value,type=get('type').value;
+  activeSpecKey=specContextKey();
+  const camera=type==='相机机身';
+  const examples={'相机机身':'A6700','镜头':'E 16–55mm F2.8 G','背包':'48L 徒步背包','羽绒服':'Anti-Freeze Lite','抓绒衣':'R1 Air','硬壳冲锋衣':'Beta AR','公路车':'斯特拉93','运动手表':'APEX 4'};
+  const example=examples[type]||examples[sub];
+  get('name').placeholder=example||'';
+  get('brand').placeholder=camera?'Sony':'搜索或输入品牌';
+  get('model').placeholder=camera?'ILCE-6700':'';
+  get('notes').placeholder=camera?'快门次数、使用感受等':'使用感受、待补信息等';
+  get('size').placeholder=category==='鞋靴系统'?'42 EU':sub==='背包'?'S/M':sub==='自行车'?'52':'M';
+  for(const id of ['series','color'])get(id).closest('label').hidden=camera&&!get(id).value;
+  get('gearInputs').hidden=!type;
+  get('saveGearBtn').disabled=!type;
+  const size=get('size'),weight=get('weight');
+  size.closest('label').hidden=!(size.value||['服装系统','鞋靴系统'].includes(category)||['自行车','骑行装备'].includes(sub)||sub==='背包');
+  get('sizeLabel').textContent=sub==='自行车'?'车架尺码':sub==='背包'?'背长 / 尺码':category==='鞋靴系统'?'鞋码':'尺码 / 规格';
+  get('weightLabel').textContent=sub==='背包'?'空包重量（克）':'重量（克）';
+  const coreWeight=['背负系统','睡眠系统','服装系统'].includes(category);
+  if(coreWeight)get('fitFields').append(weight.closest('label'));
+  else get('notes').closest('label').before(weight.closest('label'));
+  const fields=specTemplate(type,sub).filter(([key])=>{
+    if(sub==='背包'&&['weightSpec','torso'].includes(key)||sub==='自行车'&&key==='size'||type==='抓绒衣'&&key==='weightSpec')return existing[key]!=null&&existing[key]!=='';
+    return true;
+  });
+  get('specSection').hidden=!fields.length;
+  get('specHint').hidden=true;
+  const primary=primarySpecs[type]||primarySpecs[sub]||fields.slice(0,2).map(([key])=>key);
+  const main=fields.filter(([key])=>primary.includes(key)&&!(sub==='背包'&&key==='torso'));
+  const more=fields.filter(field=>!main.includes(field));
+  const control=(([k,label,t,extra])=>{const v=existing[k]??'';const ctrl=t==='select'?`<select data-spec="${k}"><option value="">请选择</option>${extra.map(x=>`<option value="${esc(x)}" ${String(v)===x?'selected':''}>${esc(x)}</option>`).join('')}</select>`:`<input data-spec="${k}" type="${t}" ${t==='number'?'step="any"':''} value="${esc(v)}" placeholder="${esc(t==='number'?'':(extra||'').replace(/^例如[：:\s]+/,''))}">`;return `<label class="field">${esc((['weightSpec','torso','size'].includes(k)&&(sub==='背包'||sub==='自行车'||type==='抓绒衣')?'历史'+label:label)+(specUnit([k,label,t,extra])?'（'+extra+'）':''))}${ctrl}</label>`});
+  get('specFields').innerHTML=main.map(control).join('')+(more.length?`<details class="form-group spec-more" ${more.some(([key])=>existing[key]!=null&&existing[key]!=='')?'open':''}><summary>更多参数</summary><div class="spec-grid">${more.map(control).join('')}</div></details>`:'');
+}
+function brandsForSpace(){showBrandSuggestions()}
+function openEditor(id=null,duplicate=false){currentEdit=id;specDrafts={};categorySelections={};activeSpecKey='';const g=id?allGears.find(x=>x.id===id):null;document.getElementById('gearForm').reset();document.getElementById('modalTitle').textContent=g?(duplicate?'复制新增装备':'编辑装备'):'新增装备';updateCategoryOptions(g?.category,g?.subcategory,g?.type);if(g?.specs)specDrafts[specContextKey()]={...g.specs};renderSpecFields(specDrafts[specContextKey()]||{});const vals={name:g?.name||'',brand:g?.brand||'',model:g?.model||'',series:g?.series||'',size:g?.size||'',color:g?.color||'',price:g?.price??'',targetPrice:g?.targetPrice??'',purchaseDate:g?.purchaseDate||'',weight:g?.weight??'',lifecycle:duplicate?'active':g?.lifecycle||'active',notes:g?.notes||''};for(const [k,v] of Object.entries(vals))document.getElementById(k).value=v;document.getElementById('ownership').value=duplicate?'owned':g?.ownership||'owned';renderSceneChips(g?.scenes||[]);selectedTags=new Set(normalizeScenes(g?.tags||[]));renderTagChoices();if(duplicate){document.getElementById('name').value=(g?.name||'')+'（副本）';document.getElementById('price').value='';document.getElementById('purchaseDate').value='';}updateOwnershipFields();document.getElementById('purchaseGroup').open=Boolean(g&&(g.price!=null||g.purchaseDate||(g.lifecycle&&g.lifecycle!=='active')));document.getElementById('sceneGroup').open=Boolean(g?.scenes?.length||g?.tags?.length);document.getElementById('extraGroup').open=Boolean(g?.model||g?.series||g?.color||g?.notes||g?.weight!=null);currentSpecType=document.getElementById('type').value;renderSpecFields(g?.specs||{});document.getElementById('deleteBtn').classList.toggle('hidden',!g||duplicate);document.getElementById('brandPickerResults').classList.add('hidden');document.getElementById('editorModal').classList.add('open');}
+function closeEditor(){document.getElementById('editorModal').classList.remove('open');currentEdit=null}
+async function saveGear(e){e.preventDefault();captureSpecDraft();const id=currentEdit,old=id?allGears.find(g=>g.id===id):null,duplicate=!!(old&&document.getElementById('modalTitle').textContent.includes('复制'));const specs=Object.fromEntries(Object.entries(specDrafts[specContextKey()]||{}).filter(([,value])=>value!==''));const brand=document.getElementById('brand').value.trim();const g={id:old&&!duplicate?old.id:uid(),workspace,name:document.getElementById('name').value.trim(),brand,model:document.getElementById('model').value.trim(),series:document.getElementById('series').value.trim(),category:document.getElementById('category').value,subcategory:document.getElementById('subcategory').value,type:document.getElementById('type').value,ownership:document.getElementById('ownership').value,lifecycle:document.getElementById('lifecycle').value,size:document.getElementById('size').value.trim(),color:document.getElementById('color').value.trim(),price:document.getElementById('price').value===''?null:Number(document.getElementById('price').value),targetPrice:document.getElementById('targetPrice').value===''?null:Number(document.getElementById('targetPrice').value),purchaseDate:document.getElementById('purchaseDate').value,weight:document.getElementById('weight').value===''?null:Number(document.getElementById('weight').value),scenes:selectedScenes(),tags:[...selectedTags],notes:document.getElementById('notes').value.trim(),specs,uses:duplicate?0:(old?.uses||0),createdAt:old&&!duplicate?old.createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};if(!g.name){toast('请填写装备名称');return}if(duplicate){g.id=uid();g.ownership='owned';g.lifecycle='active';g.uses=0}await put('gears',g);if(old&&!duplicate)toast('装备已更新');else toast(duplicate?'已复制新增一件装备':'装备已添加');closeEditor();await load()}
+async function deleteGear(){if(!currentEdit)return;const g=allGears.find(x=>x.id===currentEdit);if(!confirm(`确定删除「${g?.name}」？删除后无法撤销，建议先导出备份。`))return;await del('gears',currentEdit);closeEditor();toast('装备已删除');await load()}
+function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.nav').forEach(v=>v.classList.toggle('active',v.dataset.view===id));const map={home:['装备总览','管理每一件装备，准备每一次出发。'],inventory:['装备库','管理真实资产、规格参数与装备状态。'],trips:['出行计划','从自己的装备出发，生成可靠的打包清单。'],assets:['资产分析','用真实记录了解装备投入、重量与使用价值。'],settings:['数据管理','备份、恢复与管理本地数据空间。']};document.getElementById('pageTitle').textContent=map[id][0];document.getElementById('pageSub').textContent=map[id][1];window.scrollTo(0,0)}
+async function switchWorkspace(v){workspace=v;activeStatus='all';activeCategory='all';activeSceneFilters=[];activeSubcategory='all';activeType='all';activeSort='updated';document.getElementById('search').value='';await seedIfNeeded(workspace);await load();toast(workspace==='personal'?'已切换到真实资产空间':'已切换到独立演示空间')}
+async function exportSpace(){const rows=(await getAll('gears')).filter(g=>g.workspace===workspace);const payload={app:'shiguang-outdoor-lab',schemaVersion:1,workspace,exportedAt:new Date().toISOString(),gears:rows};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`shiguang-${workspace}-backup-${new Date().toISOString().slice(0,10)}.json`;a.click();URL.revokeObjectURL(url);toast('备份文件已生成')}
+function validateImportGear(g, targetWorkspace, ids, foreignIds){
+const fail=(message)=>{throw new Error(message)};
+if(!g||typeof g!=='object'||Array.isArray(g))fail('装备记录必须是对象');
+if(typeof g.id!=='string'||!g.id.trim()||g.id.length>128)fail('装备 ID 必须是非空字符串（最多 128 个字符）');
+const id=g.id.trim();
+if(typeof g.name!=='string'||!g.name.trim()||g.name.length>200)fail(`装备「${id}」缺少有效名称或名称过长`);
+if(g.workspace!==targetWorkspace)fail(`装备「${id}」的数据空间不匹配`);
+if(ids.has(id))fail(`备份中存在重复装备 ID：${id}`);
+if(foreignIds.has(id))fail(`装备 ID「${id}」与另一数据空间冲突`);
+const stringFields=['brand','model','series','category','subcategory','type','lifecycle','ownership','size','color','purchaseDate','notes','sourceNote','createdAt','updatedAt'];
+for(const key of stringFields){
+if(g[key]!=null&&typeof g[key]!=='string')fail(`装备「${g.name}」的字段「${key}」必须是文本`);
+}
+const numberFields=['price','targetPrice','weight','uses'];
+for(const key of numberFields){
+if(g[key]!=null&&(typeof g[key]!=='number'||!Number.isFinite(g[key])||g[key]<0))fail(`装备「${g.name}」的字段「${key}」必须是非负有效数字或 null`);
+}
+if(g.uses!=null&&!Number.isInteger(g.uses))fail(`装备「${g.name}」的使用次数必须是非负整数`);
+if(g.ownership!=null&&!['owned','verify','wish'].includes(g.ownership))fail(`装备「${g.name}」的归属状态无效`);
+if(g.lifecycle!=null&&!['active','idle','repair','retired','sold'].includes(g.lifecycle))fail(`装备「${g.name}」的生命周期状态无效`);
+if(g.scenes!=null&&(!Array.isArray(g.scenes)||g.scenes.some(x=>typeof x!=='string')))fail(`装备「${g.name}」的适用场景必须是文本数组`);
+if(g.tags!=null&&!Array.isArray(g.tags)&&typeof g.tags!=='string')fail(`装备「${g.name}」的标签必须是文本数组或文本`);
+if(Array.isArray(g.tags)&&g.tags.some(x=>typeof x!=='string'))fail(`装备「${g.name}」的标签数组包含非文本值`);
+if(g.specs!=null&&(!g.specs||typeof g.specs!=='object'||Array.isArray(g.specs)))fail(`装备「${g.name}」的专属参数必须是对象`);
+if(g.specs&&Object.entries(g.specs).some(([k,v])=>!k.trim()||!['string','number','boolean'].includes(typeof v)||(typeof v==='number'&&!Number.isFinite(v))))fail(`装备「${g.name}」的专属参数包含无效键值`);
+ids.add(id);
+return {...g,id,name:g.name.trim(),scenes:normalizeScenes(g.scenes||[]),specs:g.specs||{},tags:Array.isArray(g.tags)?g.tags:parseList(g.tags||'')};
+}
+function validateImportFile(obj,targetWorkspace,foreignIds){
+if(!obj||typeof obj!=='object'||Array.isArray(obj))throw new Error('备份文件根节点必须是 JSON 对象');
+if(obj.app!=='shiguang-outdoor-lab')throw new Error('备份文件来源不正确');
+if(obj.schemaVersion!==1)throw new Error('不支持的备份版本');
+if(obj.workspace!==targetWorkspace)throw new Error('备份所属数据空间与当前空间不一致');
+if(!Array.isArray(obj.gears))throw new Error('备份缺少有效的装备数组');
+if(obj.gears.length>20000)throw new Error('装备记录超过单次导入上限（20000 件）');
+const ids=new Set();
+const normalized=[];
+for(let i=0;i<obj.gears.length;i++){
+try{normalized.push(validateImportGear(obj.gears[i],targetWorkspace,ids,foreignIds))}
+catch(e){throw new Error(`第 ${i+1} 条装备记录校验失败：${e.message}`)}
+}
+return normalized;
+}
+async function importSpace(file){
+let transactionStarted=false,transactionCommitted=false;
+try{
+if(!file||typeof file.text!=='function')throw Error('未读取到有效备份文件');
+const raw=await file.text();
+let obj;
+try{obj=JSON.parse(raw)}catch(_){throw Error('JSON 文件解析失败，请检查文件是否完整')}
+// 先读取现有 ID 仅用于跨空间冲突检查；此时不执行任何写操作。
+const all=await getAll('gears');
+const foreignIds=new Set(all.filter(g=>g.workspace!==workspace).map(g=>g.id));
+const normalized=validateImportFile(obj,workspace,foreignIds);
+if(!confirm(`即将用备份中的 ${normalized.length} 件装备覆盖当前「${workspace==='personal'?'真实资产':'演示空间'}」。导入失败时会回滚，当前空间原数据将保留。其他空间不会受影响。继续吗？`))return;
+await new Promise((resolve,reject)=>{
+let settled=false;
+const t=db.transaction('gears','readwrite');
+transactionStarted=true;
+const store=t.objectStore('gears');
+const fail=(err)=>{if(!settled){settled=true;reject(err instanceof Error?err:new Error(String(err||'未知事务错误')))}};
+t.oncomplete=()=>{if(!settled){settled=true;resolve()}};
+t.onerror=()=>fail(t.error||new Error('IndexedDB 写入失败'));
+t.onabort=()=>fail(t.error||new Error('IndexedDB 事务已回滚'));
+const cursorRequest=store.openCursor();
+cursorRequest.onerror=()=>{try{t.abort()}catch(_){};fail(cursorRequest.error||new Error('读取当前空间数据失败'))};
+cursorRequest.onsuccess=()=>{
+const cursor=cursorRequest.result;
+if(cursor){
+if(cursor.value.workspace===workspace){
+const deleteRequest=cursor.delete();
+deleteRequest.onerror=()=>{try{t.abort()}catch(_){};fail(deleteRequest.error||new Error('删除旧记录失败'))};
+}
+cursor.continue();
+}else{
+try{
+for(const g of normalized)store.put(g);
+}catch(err){
+try{t.abort()}catch(_){}
+fail(err);
+}
+}
+};
+});
+transactionCommitted=true;
+await load();
+toast(`数据导入完成，共恢复 ${normalized.length} 件装备`);
+}catch(e){
+const detail=e&&e.message?e.message:String(e||'未知错误');
+const prefix=transactionStarted&&!transactionCommitted
+?'导入写入失败，IndexedDB 事务已中止并回滚。当前空间原数据已保留，未完成本次覆盖。'
+:transactionCommitted
+?'数据已写入成功，但页面刷新时发生错误。请重新加载页面核对导入结果。'
+:'导入校验失败，尚未修改当前空间数据。';
+alert(`${prefix}\n原因：${detail}`);
+}finally{
+document.getElementById('importFile').value='';
+}
+}
+function renderBrandList(){const names=[...new Set([...BRANDS,...allGears.map(g=>g.brand).filter(Boolean)])].sort((a,b)=>a.localeCompare(b));document.getElementById('brandList').innerHTML=`<div class="brand-suggest">当前空间记录及系统预置品牌 · ${names.length} 个候选</div><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px">${names.map(n=>`<span class="tag" style="font-size:10px;padding:6px 8px">${esc(n)}</span>`).join('')}</div>`}
+async function resetDemo(){if(workspace!=='demo'){if(!confirm('此操作仅清空演示空间，不会影响真实资产。切换到演示空间并重置？'))return;await switchWorkspace('demo')}if(!confirm('确定重置演示数据？演示空间中的修改将丢失。'))return;const rows=(await getAll('gears')).filter(g=>g.workspace==='demo');for(const g of rows)await del('gears',g.id);await reqp(tx('meta','readwrite').delete('seeded_demo'));await seedIfNeeded('demo');await migrateSceneData();await load();toast('演示数据已恢复')}
+document.querySelectorAll('.nav').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.view)));document.getElementById('workspace').addEventListener('change',e=>switchWorkspace(e.target.value));document.getElementById('addTop').addEventListener('click',()=>openEditor());document.getElementById('closeModal').addEventListener('click',closeEditor);document.getElementById('cancelBtn').addEventListener('click',closeEditor);document.getElementById('gearForm').addEventListener('submit',saveGear);document.getElementById('deleteBtn').addEventListener('click',deleteGear);document.getElementById('category').addEventListener('change',e=>{captureSpecDraft();updateCategoryOptions(e.target.value)});document.getElementById('subcategory').addEventListener('change',e=>{captureSpecDraft();updateCategoryOptions(document.getElementById('category').value,e.target.value)});document.getElementById('type').addEventListener('change',e=>{captureSpecDraft();currentSpecType=e.target.value;renderSpecFields(specDrafts[specContextKey()]||{});rememberCategorySelection()});document.getElementById('ownership').addEventListener('change',updateOwnershipFields);document.getElementById('sceneChips').addEventListener('click',e=>{const b=e.target.closest('.scene-chip');if(b)toggleScene(b)});document.getElementById('brand').addEventListener('input',showBrandSuggestions);document.getElementById('brand').addEventListener('focus',showBrandSuggestions);document.getElementById('brandPickerResults').addEventListener('click',e=>{const b=e.target.closest('[data-brand]');if(b){document.getElementById('brand').value=b.dataset.brand;document.getElementById('brandPickerResults').classList.add('hidden')}});document.addEventListener('click',e=>{if(!e.target.closest('.brand-field'))document.getElementById('brandPickerResults').classList.add('hidden')});document.getElementById('search').addEventListener('input',renderInventory);document.getElementById('sceneFilters').addEventListener('click',e=>{const b=e.target.closest('[data-scene-filter]');if(!b)return;const v=b.dataset.sceneFilter;if(v==='all')activeSceneFilters=[];else activeSceneFilters=activeSceneFilters.includes(v)?activeSceneFilters.filter(x=>x!==v):[...activeSceneFilters,v];renderInventory()});document.getElementById('subcategoryFilter').addEventListener('change',e=>{activeSubcategory=e.target.value;activeType='all';renderInventory()});document.getElementById('typeFilter').addEventListener('change',e=>{activeType=e.target.value;renderInventory()});document.getElementById('sortFilter').addEventListener('change',e=>{activeSort=e.target.value;renderInventory()});document.getElementById('clearFilters').addEventListener('click',()=>{document.getElementById('search').value='';activeStatus='all';activeCategory='all';activeSceneFilters=[];activeSubcategory='all';activeType='all';activeSort='updated';renderInventory()});document.getElementById('exportBtn').addEventListener('click',exportSpace);document.getElementById('importBtn').addEventListener('click',()=>document.getElementById('importFile').click());document.getElementById('importFile').addEventListener('change',e=>{if(e.target.files[0])importSpace(e.target.files[0])});document.getElementById('resetDemo').addEventListener('click',resetDemo);document.getElementById('closeDetail').addEventListener('click',closeDetail);document.getElementById('detailClose').addEventListener('click',closeDetail);document.getElementById('detailEdit').addEventListener('click',()=>{const id=currentDetail;closeDetail();openEditor(id)});document.getElementById('detailDuplicate').addEventListener('click',()=>{const id=currentDetail;closeDetail();openEditor(id,true)});document.getElementById('detailModal').addEventListener('click',e=>{if(e.target.id==='detailModal')closeDetail()});document.getElementById('editorModal').addEventListener('click',e=>{if(e.target.id==='editorModal')closeEditor()});
+(async()=>{try{db=await openDB();await seedIfNeeded('personal');await seedIfNeeded('demo');await migrateSceneData();await load()}catch(e){console.error(e);alert('本地数据库初始化失败：'+e.message)}})();
+</script></body></html>
